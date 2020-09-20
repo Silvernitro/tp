@@ -80,7 +80,7 @@ public class ParserUtil {
         }
         return new Address(trimmedAddress);
     }
-    
+
     /**
      * Parses a {@code String remark} into an {@code remark}.
      * Leading and trailing whitespaces will be trimmed.
