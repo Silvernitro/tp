@@ -14,7 +14,6 @@ import seedu.address.model.person.Remark;
 
 public class RemarkCommand extends Command {
     public static final String COMMAND_WORD = "remark";
-    
     public static final String MESSAGE_USAGE = COMMAND_WORD
            + ": Edits the remark of the person identified "
            + "by the index number used in the last person listing. "
@@ -23,13 +22,18 @@ public class RemarkCommand extends Command {
            + "r/ [REMARK]\n"
            + "Example: " + COMMAND_WORD + " 1 "
            + "r/ Likes to swim.";
-    
     public static final String MESSAGE_ADD_REMARK_SUCCESS = "Added remark to Person: %1$s";
     public static final String MESSAGE_DELETE_REMARK_SUCCESS = "Removed remark from Person: %1$s";
-    
     private final Index targetIndex;
     private final Remark remark;
-
+    
+    /**
+     * Creates a RemarkCommand to add a {@code Remark} to the {@code Person} at the specified
+     * {@code Index}.
+     *
+     * @param targetIndex The person's index
+     * @param remark The remark to add
+     */
     public RemarkCommand(Index targetIndex, Remark remark) {
         requireAllNonNull(targetIndex, remark);
         
